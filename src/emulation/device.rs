@@ -3,6 +3,7 @@
 #[macro_use]
 mod macros;
 pub mod chrome;
+pub mod chromium;
 pub mod firefox;
 pub mod okhttp;
 pub mod opera;

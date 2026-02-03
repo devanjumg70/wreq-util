@@ -2,7 +2,7 @@ mod device;
 #[cfg(feature = "emulation-rand")]
 mod rand;
 
-use device::{chrome::*, firefox::*, okhttp::*, opera::*, safari::*};
+use device::{chrome::*, chromium::*, firefox::*, okhttp::*, opera::*, safari::*};
 #[cfg(feature = "emulation-serde")]
 use serde::{Deserialize, Serialize};
 #[cfg(feature = "emulation-rand")]
@@ -129,6 +129,8 @@ define_enum!(
     Chrome141 => ("chrome_141", v141::emulation),
     Chrome142 => ("chrome_142", v142::emulation),
     Chrome143 => ("chrome_143", v143::emulation),
+    Chrome144 => ("chrome_144", v144::emulation),
+    Chrome145 => ("chrome_145", v145::emulation),
 
     // Edge versions
     Edge101 => ("edge_101", edge101::emulation),
@@ -144,6 +146,9 @@ define_enum!(
     Edge140 => ("edge_140", edge140::emulation),
     Edge141 => ("edge_141", edge141::emulation),
     Edge142 => ("edge_142", edge142::emulation),
+    Edge143 => ("edge_143", edge143::emulation),
+    Edge144 => ("edge_144", edge144::emulation),
+    Edge145 => ("edge_145", edge145::emulation),
 
     // Opera versions
     Opera116 => ("opera_116", opera116::emulation),
@@ -205,7 +210,10 @@ define_enum!(
     OkHttp4_9 => ("okhttp_4.9", okhttp4_9::emulation),
     OkHttp4_10 => ("okhttp_4.10", okhttp4_10::emulation),
     OkHttp4_12 => ("okhttp_4.12", okhttp4_12::emulation),
-    OkHttp5 => ("okhttp_5", okhttp5::emulation)
+    OkHttp5 => ("okhttp_5", okhttp5::emulation),
+
+    // Chromium-accurate profiles (fingerprint-accurate, not performance-optimized)
+    ChromiumLatest => ("chromium_latest", chromium_latest::emulation)
 
 );
 

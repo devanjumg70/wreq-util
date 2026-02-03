@@ -105,6 +105,11 @@ pub struct ChromeTlsConfig {
 
     #[builder(default = false, setter(into))]
     pre_shared_key: bool,
+
+    /// Chromium only sends key shares for the first 2 named groups.
+    /// Source: net/ssl/ssl_config_service.cc
+    #[builder(default = 2u8)]
+    key_shares_limit: u8,
 }
 
 impl From<ChromeTlsConfig> for TlsOptions {
@@ -124,6 +129,7 @@ impl From<ChromeTlsConfig> for TlsOptions {
             .alps_protocols([val.alps_protos])
             .alps_use_new_codepoint(val.alps_use_new_codepoint)
             .aes_hw_override(true)
+            .key_shares_limit(val.key_shares_limit)
             .certificate_compression_algorithms(CERT_COMPRESSION_ALGORITHM)
             .build()
     }
