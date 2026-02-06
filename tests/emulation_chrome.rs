@@ -22,13 +22,6 @@ test_emulation!(
 );
 
 test_emulation!(
-    test_edge101,
-    Emulation::Edge101,
-    ["t13d1516h2_8daaf6152771_e5627efa2ab1"],
-    "4f04edce68a7ecbe689edce7bf5f23f3"
-);
-
-test_emulation!(
     test_chrome104,
     Emulation::Chrome104,
     ["t13d1516h2_8daaf6152771_e5627efa2ab1"],
@@ -138,16 +131,6 @@ test_emulation!(
 );
 
 test_emulation!(
-    test_edge122,
-    Emulation::Edge122,
-    [
-        "t13d1516h2_8daaf6152771_02713d6af862",
-        "t13d1517h2_8daaf6152771_b1ff8ab2d16f"
-    ],
-    "52d84b11737d980aef856699f885ca86"
-);
-
-test_emulation!(
     test_chrome123,
     Emulation::Chrome123,
     [
@@ -174,13 +157,6 @@ test_emulation!(
 test_emulation!(
     test_chrome127,
     Emulation::Chrome127,
-    ["t13d1516h2_8daaf6152771_02713d6af862"],
-    "52d84b11737d980aef856699f885ca86"
-);
-
-test_emulation!(
-    test_edge127,
-    Emulation::Edge127,
     ["t13d1516h2_8daaf6152771_02713d6af862"],
     "52d84b11737d980aef856699f885ca86"
 );
@@ -214,13 +190,6 @@ test_emulation!(
 );
 
 test_emulation!(
-    test_edge131,
-    Emulation::Edge131,
-    ["t13d1516h2_8daaf6152771_02713d6af862"],
-    "52d84b11737d980aef856699f885ca86"
-);
-
-test_emulation!(
     test_chrome132,
     Emulation::Chrome132,
     ["t13d1516h2_8daaf6152771_d8a2da3f94cd"],
@@ -238,13 +207,6 @@ test_emulation!(
     test_chrome134,
     Emulation::Chrome134,
     ["t13d1516h2_8daaf6152771_d8a2da3f94cd"],
-    "52d84b11737d980aef856699f885ca86"
-);
-
-test_emulation!(
-    test_edge134,
-    Emulation::Edge134,
-    ["t13d1516h2_8daaf6152771_02713d6af862"],
     "52d84b11737d980aef856699f885ca86"
 );
 
@@ -279,27 +241,6 @@ test_emulation!(
 test_emulation!(
     test_chrome145,
     Emulation::Chrome145,
-    ["t13d1516h2_8daaf6152771_d8a2da3f94cd"],
-    "52d84b11737d980aef856699f885ca86"
-);
-
-test_emulation!(
-    test_edge143,
-    Emulation::Edge143,
-    ["t13d1516h2_8daaf6152771_d8a2da3f94cd"],
-    "52d84b11737d980aef856699f885ca86"
-);
-
-test_emulation!(
-    test_edge144,
-    Emulation::Edge144,
-    ["t13d1516h2_8daaf6152771_d8a2da3f94cd"],
-    "52d84b11737d980aef856699f885ca86"
-);
-
-test_emulation!(
-    test_edge145,
-    Emulation::Edge145,
     ["t13d1516h2_8daaf6152771_d8a2da3f94cd"],
     "52d84b11737d980aef856699f885ca86"
 );

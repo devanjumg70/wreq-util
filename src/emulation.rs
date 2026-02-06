@@ -132,23 +132,7 @@ define_enum!(
     Chrome144 => ("chrome_144", v144::emulation),
     Chrome145 => ("chrome_145", v145::emulation),
 
-    // Edge versions
-    Edge101 => ("edge_101", edge101::emulation),
-    Edge122 => ("edge_122", edge122::emulation),
-    Edge127 => ("edge_127", edge127::emulation),
-    Edge131 => ("edge_131", edge131::emulation),
-    Edge134 => ("edge_134", edge134::emulation),
-    Edge135 => ("edge_135", edge135::emulation),
-    Edge136 => ("edge_136", edge136::emulation),
-    Edge137 => ("edge_137", edge137::emulation),
-    Edge138 => ("edge_138", edge138::emulation),
-    Edge139 => ("edge_139", edge139::emulation),
-    Edge140 => ("edge_140", edge140::emulation),
-    Edge141 => ("edge_141", edge141::emulation),
-    Edge142 => ("edge_142", edge142::emulation),
-    Edge143 => ("edge_143", edge143::emulation),
-    Edge144 => ("edge_144", edge144::emulation),
-    Edge145 => ("edge_145", edge145::emulation),
+
 
 
 
