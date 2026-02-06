@@ -70,18 +70,6 @@ path = "tests/client.rs"
 name = "emulation_chrome"
 path = "tests/emulation_chrome.rs"
 
-[[test]]
-name = "emulation_okhttp"
-path = "tests/emulation_okhttp.rs"
-
-[[test]]
-name = "emulation_firefox"
-path = "tests/emulation_firefox.rs"
-
-[[test]]
-name = "emulation_safari"
-path = "tests/emulation_safari.rs"
-
 
 [[example]]
 name = "emulation"

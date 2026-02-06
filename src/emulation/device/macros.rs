@@ -42,55 +42,6 @@ macro_rules! header_chrome_accept {
     }
 }
 
-macro_rules! header_firefox_sec_fetch {
-    ($headers:expr) => {
-        $headers.insert("sec-fetch-dest", HeaderValue::from_static("document"));
-        $headers.insert("sec-fetch-mode", HeaderValue::from_static("navigate"));
-        $headers.insert("sec-fetch-site", HeaderValue::from_static("none"));
-    };
-}
-
-macro_rules! header_firefox_accept {
-    ($headers:expr) => {
-        $headers.insert(
-            ACCEPT,
-            HeaderValue::from_static(
-                "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-            ),
-        );
-        #[cfg(feature = "emulation-compression")]
-        $headers.insert(
-            ACCEPT_ENCODING,
-            HeaderValue::from_static("gzip, deflate, br"),
-        );
-        $headers.insert(ACCEPT_LANGUAGE, HeaderValue::from_static("en-US,en;q=0.5"));
-    };
-    (zstd, $headers:expr) => {
-        $headers.insert(
-            ACCEPT,
-            HeaderValue::from_static(
-                "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-            ),
-        );
-        #[cfg(feature = "emulation-compression")]
-        $headers.insert(
-            ACCEPT_ENCODING,
-            HeaderValue::from_static("gzip, deflate, br, zstd"),
-        );
-        $headers.insert(ACCEPT_LANGUAGE, HeaderValue::from_static("en-US,en;q=0.5"));
-    };
-}
-
-macro_rules! header_firefox_ua {
-    ($headers:expr, $ua:expr) => {
-        $headers.insert(
-            HeaderName::from_static("te"),
-            HeaderValue::from_static("trailers"),
-        );
-        $headers.insert(USER_AGENT, HeaderValue::from_static($ua));
-    };
-}
-
 macro_rules! join {
     ($sep:expr, $first:expr $(, $rest:expr)*) => {
         concat!($first $(, $sep, $rest)*)

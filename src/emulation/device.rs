@@ -3,11 +3,6 @@
 #[macro_use]
 mod macros;
 pub mod chrome;
-pub mod chromium;
-pub mod firefox;
-pub mod okhttp;
-pub mod opera;
-pub mod safari;
 
 pub use typed_builder::TypedBuilder;
 #[cfg(feature = "emulation-compression")]
@@ -16,13 +11,9 @@ pub use wreq::{
     Emulation,
     header::{ACCEPT, ACCEPT_LANGUAGE, HeaderMap, HeaderName, HeaderValue, USER_AGENT},
     http2::{
-        Http2Options, Priorities, Priority, PseudoId, PseudoOrder, SettingId, SettingsOrder,
-        StreamDependency, StreamId,
+        Http2Options, PseudoId, PseudoOrder, SettingId, SettingsOrder, StreamDependency, StreamId,
     },
-    tls::{
-        AlpnProtocol, AlpsProtocol, CertificateCompressionAlgorithm, ExtensionType, TlsOptions,
-        TlsVersion,
-    },
+    tls::{AlpsProtocol, CertificateCompressionAlgorithm, TlsOptions, TlsVersion},
 };
 
 pub use crate::emulation::{EmulationOS, EmulationOption};

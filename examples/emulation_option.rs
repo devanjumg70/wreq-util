@@ -7,9 +7,9 @@ async fn main() -> Result<(), wreq::Error> {
         .with_max_level(tracing::Level::TRACE)
         .init();
 
-    // Build a client to emulation Firefox128
+    // Build a client to emulation Chrome100
     let emulation = EmulationOption::builder()
-        .emulation(Emulation::Firefox128)
+        .emulation(Emulation::Chrome100)
         .emulation_os(EmulationOS::Windows)
         .skip_http2(true)
         .build();

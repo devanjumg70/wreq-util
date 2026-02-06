@@ -3,9 +3,9 @@ use wreq_util::Emulation;
 
 #[tokio::main]
 async fn main() -> Result<(), wreq::Error> {
-    // Build a client to emulation Safari26
+    // Build a client to emulation Chrome100
     let client = Client::builder()
-        .emulation(Emulation::Safari26)
+        .emulation(Emulation::Chrome100)
         .cert_verification(false)
         .build()?;
 
